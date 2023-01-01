@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { snippets as snippetsCommand } from "./commands/snippets.js";
+import "./groupCommands.js";
 import { program } from "commander";
-program.addCommand(snippetsCommand);
+import { checkProperConfiguration } from "./functions/checkProperConfiguration.js";
+await checkProperConfiguration();
 program.parse(process.argv);
