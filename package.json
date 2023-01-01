@@ -1,7 +1,7 @@
 {
   "name": "@worldapi/cli",
   "main": "./dist",
-  "version": "alpha",
+  "version": "0.0.1-alpha",
   "type": "module",
   "bin": {
     "worldapi": "./dist/index.js"
