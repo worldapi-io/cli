@@ -24,14 +24,15 @@ export default async function edit(name: string, args: EditArgs) {
         return console.log("[WorldAPI]: File not found to edit snippet");
       }
     } else if (args.content) {
-      await fs.writeFile(`${refs.rootDir}/snippets/${name}`, args.content || "");
+      await fs.writeFile(
+        `${refs.rootDir}/snippets/${name}`,
+        args.content || ""
+      );
       console.log(`[WorldAPI]: Snippet ${name} edited`);
     }
-    if (args.trigger)
-      await applyTrigger(name, args.trigger);
+    if (args.trigger) await applyTrigger(name, args.trigger);
   } catch (error) {
     console.error("[WorldAPI]: An error occured while editing the snippet");
     console.log(error);
-
   }
 }
