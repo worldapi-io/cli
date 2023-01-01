@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import absorbHandler from "../actions/absord/absorb.js";
+import absorbHandler from "../actions/absorb.js";
 export const absord = new Command();
 
 absord
