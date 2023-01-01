@@ -1,7 +1,7 @@
 {
   "name": "@worldapi/cli",
   "main": "./dist",
-  "version": "0.0.1",
+  "version": "alpha",
   "type": "module",
   "bin": {
     "worldapi": "./dist/index.js"
@@ -20,5 +20,16 @@
     "build": "tsc",
     "test": "jest",
     "format": "prettier --write \"**/*.ts\""
+  },
+  "author": {
+    "name": "WorldAPI",
+    "email": "support@world-api.io"
+  },
+  "license": "Apache-2.0",
+  "description": "A productivity focused CLI and terminal for WorldAPI.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/worldapi-io/cli"
   }
+
 }
