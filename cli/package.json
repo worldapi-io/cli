@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.3.1",
+    "@types/glob": "^8.0.0",
     "@types/node": "^18.11.18",
     "@types/which": "^2.0.1",
     "prettier": "^2.8.1",
@@ -16,12 +17,15 @@
   "dependencies": {
     "chokidar": "^3.5.3",
     "commander": "^9.4.1",
+    "glob": "^8.0.3",
+    "glob-promise": "^6.0.1",
     "which": "^3.0.0"
   },
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "format": "prettier --write \"**/*.ts\""
+    "format": "prettier --write \"**/*.ts\"",
+    "link": "tsc && npm link"
   },
   "author": {
     "name": "WorldAPI",
