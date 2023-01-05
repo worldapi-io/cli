@@ -5,6 +5,6 @@ export const absorb = new Command();
 absorb
     .name("absorb")
     .version("0.0.1")
-    .description("Absord the configuration of a folder into the cli")
+    .description("Absorb the worldapi configuration of a folder into the cli")
     .argument("<path>", "Path to the folder to absorb")
     .action(absorbHandler);
