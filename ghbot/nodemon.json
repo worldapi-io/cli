@@ -1,0 +1,5 @@
+{
+    "execMap" : {
+        "ts": "tsc && probot run ./dist/index.js"
+    }
+}
