@@ -1,8 +1,8 @@
 import { Command } from "commander";
 import absorbHandler from "../actions/absorb.js";
-export const absord = new Command();
+export const absorb = new Command();
 
-absord
+absorb
     .name("absorb")
     .version("0.0.1")
     .description("Absord the configuration of a folder into the cli")

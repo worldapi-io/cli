@@ -1,4 +1,4 @@
-import searchFile from "../../functions/fs/search/searchFile.js";
+import searchFile from "../../functions/fs/searchFile.js";
 import glob from "glob-promise";
 
 interface Options {
