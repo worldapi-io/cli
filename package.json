@@ -1,7 +1,7 @@
 {
   "name": "@worldapi/cli",
   "main": "./dist",
-  "version": "0.0.1",
+  "version": "v0.0.22",
   "type": "module",
   "bin": {
     "worldapi": "./dist/index.js"
@@ -37,4 +37,5 @@
     "type": "git",
     "url": "https://github.com/worldapi-io/cli"
   }
+
 }
