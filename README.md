@@ -1,8 +1,6 @@
 # World API CLI
 
-### A CLI to boost your productivity while coding
-
-### (And a way to solve small annoying problems)
+### A CLI to boost your productivity while coding ### (And a way to solve small annoying problems)
 
 ## Installation
 
