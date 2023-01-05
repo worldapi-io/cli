@@ -7,3 +7,6 @@ export default async function absorbSnippetFolder(path: string) {
         createSnippet(snippet.split(".")[0], { file: `${path}/snippets/${snippet}` })
     );
 }
+
+
+//queyyyyyyy
