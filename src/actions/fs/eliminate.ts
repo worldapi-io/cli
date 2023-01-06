@@ -9,7 +9,7 @@ export default async function (query: string, path: string, options: { dir: bool
         const _promises = paths.map(async (pt) => {
             const stats = await fs.stat(pt)
             if (options.dir && stats.isDirectory() && pt.includes(query)) {
-                return fs.rmdir(pt)
+                return fs.rm(pt, { recursive: true })
             } else if (!options.dir && stats.isFile() && pt.includes(query)) {
                 return fs.rm(pt)
             }
@@ -17,6 +17,6 @@ export default async function (query: string, path: string, options: { dir: bool
         await Promise.all(_promises)
         console.log(`[World API]: Eliminated ${query} from ${path}.`);
     } catch (error) {
-        console.error('[World API]: An error occured while querying the file system.');
+        console.error('[World API]: An error occured while querying the file system.', error);
     }
 }
