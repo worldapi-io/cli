@@ -1,7 +1,7 @@
 {
   "name": "@worldapi/cli",
   "main": "./dist",
-  "version": "v0.0.23",
+  "version": "v0.1",
   "type": "module",
   "bin": {
     "worldapi": "./dist/index.js"
@@ -36,6 +36,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/worldapi-io/cli"
-  }
+  },
+  "keywords": ["CLI", "Productivity", "Open Source", "World API", "File System", "Snippets", "Productivity Boost", "Development Tools", "Node Modules"]
 
 }
