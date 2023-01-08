@@ -3,3 +3,4 @@ test
 node_modules
 tsconfig.json
 .gitpod.yml
+__tests__

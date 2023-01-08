@@ -1,7 +1,7 @@
 {
   "name": "@worldapi/cli",
   "main": "./dist",
-  "version": "v0.1",
+  "version": "v0.1.1",
   "type": "module",
   "bin": {
     "worldapi": "./dist/index.js"
@@ -18,8 +18,7 @@
     "chokidar": "^3.5.3",
     "commander": "^9.4.1",
     "glob": "^8.0.3",
-    "glob-promise": "^6.0.1",
-    "which": "^3.0.0"
+    "glob-promise": "^6.0.1"
   },
   "scripts": {
     "build": "tsc",
