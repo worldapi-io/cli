@@ -8,11 +8,11 @@ export default async function delete_cmd(name: string) {
     await checkFolderExistance(`${refs.rootDir}/snippets`);
     const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
     if (!snippets.includes(name))
-      return console.log(`[WorldAPI]: Snippet ${name} does not exist`);
+      return console.log(`[World API]: Snippet ${name} does not exist`);
     await fs.rm(`${refs.rootDir}/snippets/${name}`);
     await deleteTrigger(name);
-    console.log(`[WorldAPI]: Snippet ${name} deleted`);
+    console.log(`[World API]: Snippet ${name} deleted`);
   } catch (error) {
-    console.error("[WorldAPI]: An error occured while deleting the snippet");
+    console.error("[World API]: An error occured while deleting the snippet");
   }
 }

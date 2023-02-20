@@ -14,8 +14,8 @@ export default async function watch(path: string) {
   let snippetTriggers = [];
   if (config.snippets) snippetTriggers = Object.values(config.snippets);
   if (snippetTriggers.length == 0)
-    return console.log("[WorldAPI]: No snippets found");
-  console.info(`[WorldAPI]: Watching ${path} for changes...`);
+    return console.log("[World API]: No snippets found");
+  console.info(`[World API]: Watching ${path} for changes...`);
   const watcher = chokidar.watch(path);
 
   watcher.on("change", async (path) => {

@@ -6,7 +6,7 @@ import absorbFileSystems from "../functions/absorb/fileSystems.js";
 
 export default async function absorb(path: string) {
   await checkFolderExistance(path);
-  console.log(`[WorldAPI]: Absorbing folder ${path}...`)
+  console.log(`[World API]: Absorbing folder ${path}...`)
   const folder = await fs.readdir(path);
   if (folder.includes("snippets")) await absorbSnippetFolder(path);
   if (folder.includes("config")) await absorbConfigFolder(path);

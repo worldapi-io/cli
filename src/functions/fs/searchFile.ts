@@ -9,7 +9,7 @@ export default async function (query: string, file: string) {
         console.log(`${file} ${results.length} Occurrences`);
 
     } catch (error) {
-        console.error('[WorldAPI]: An error occurred while querying the file system.');
+        console.error('[World API]: An error occurred while querying the file system.');
 
     }
 }

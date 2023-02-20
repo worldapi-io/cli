@@ -14,25 +14,25 @@ export default async function edit(name: string, args: EditArgs) {
     await checkFolderExistance(`${refs.rootDir}/snippets`);
     const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
     if (!snippets.includes(name))
-      return console.log(`[WorldAPI]: Snippet ${name} does not exist`);
+      return console.log(`[World API]: Snippet ${name} does not exist`);
     if (args.file) {
       try {
         const filedata = await fs.readFile(args.file);
         await fs.writeFile(`${refs.rootDir}/snippets/${name}`, filedata);
-        console.log(`[WorldAPI]: Snippet ${name} edited`);
+        console.log(`[World API]: Snippet ${name} edited`);
       } catch (error) {
-        return console.log("[WorldAPI]: File not found to edit snippet");
+        return console.log("[World API]: File not found to edit snippet");
       }
     } else if (args.content) {
       await fs.writeFile(
         `${refs.rootDir}/snippets/${name}`,
         args.content || ""
       );
-      console.log(`[WorldAPI]: Snippet ${name} edited`);
+      console.log(`[World API]: Snippet ${name} edited`);
     }
     if (args.trigger) await applyTrigger(name, args.trigger);
   } catch (error) {
-    console.error("[WorldAPI]: An error occured while editing the snippet");
+    console.error("[World API]: An error occured while editing the snippet");
     console.log(error);
   }
 }

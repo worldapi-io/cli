@@ -7,14 +7,14 @@ export default async function paste(name: string, file: string) {
     await checkFolderExistance(`${refs.rootDir}/snippets`);
     const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
     if (!snippets.includes(name))
-      return console.error(`[WorldAPI] Snippet ${name} does not exist!`);
+      return console.error(`[World API] Snippet ${name} does not exist!`);
     const snippet = await fs.readFile(
       `${refs.rootDir}/snippets/${name}`,
       "utf-8"
     );
     await fs.writeFile(file, snippet);
-    console.log(`[WorldAPI] Pasted snippet ${name} into ${file}`);
+    console.log(`[World API] Pasted snippet ${name} into ${file}`);
   } catch (error) {
-    console.error("[WorldAPI]: An error occured while pasting the snippet");
+    console.error("[World API]: An error occured while pasting the snippet");
   }
 }

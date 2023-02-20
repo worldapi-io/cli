@@ -8,9 +8,9 @@ const list = async () => {
     const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
     let list = "";
     snippets.forEach((snippet) => (list += `\n• ${snippet}`));
-    console.log(`[WorldAPI]: Snippets:${list}`);
+    console.log(`[World API]: Snippets:${list}`);
   } catch (error) {
-    console.error("[WorldAPI]: An error occured while listing the snippets");
+    console.error("[World API]: An error occured while listing the snippets");
   }
 };
 

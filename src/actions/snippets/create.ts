@@ -13,20 +13,20 @@ const create = async (name: string, args: CreateArgs) => {
   await checkFolderExistance(`${refs.rootDir}/snippets`);
   const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
   if (snippets.includes(name))
-    return console.log(`[WorldAPI]: Snippet ${name} already exists`);
+    return console.log(`[World API]: Snippet ${name} already exists`);
   if (args.file) {
     try {
       const filedata = await fs.readFile(args.file);
       await fs.writeFile(`${refs.rootDir}/snippets/${name}`, filedata);
       if (args.trigger) applyTrigger(name, args.trigger);
-      return console.log(`[WorldAPI]: Snippet ${name} created`);
+      return console.log(`[World API]: Snippet ${name} created`);
     } catch (error) {
-      return console.log("[WorldAPI]: File not found to create snippet");
+      return console.log("[World API]: File not found to create snippet");
     }
   }
   if (args.trigger) applyTrigger(name, args.trigger);
   await fs.writeFile(`${refs.rootDir}/snippets/${name}`, args.content || "");
-  console.log(`[WorldAPI]: Snippet ${name} created`);
+  console.log(`[World API]: Snippet ${name} created`);
 };
 
 export default create;

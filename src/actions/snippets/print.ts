@@ -7,10 +7,10 @@ export default async function print(name: string) {
     await checkFolderExistance(`${refs.rootDir}/snippets`);
     const snippets = await fs.readdir(`${refs.rootDir}/snippets`);
     if (!snippets.includes(name))
-      return console.error(`[WorldAPI]: Snippet ${name} does not exist`);
+      return console.error(`[World API]: Snippet ${name} does not exist`);
     const data = await fs.readFile(`${refs.rootDir}/snippets/${name}`);
-    console.log(`[WorldAPI]: Snippet ${name}:\n${data}`);
+    console.log(`[World API]: Snippet ${name}:\n${data}`);
   } catch (error) {
-    console.error("[WorldAPI]: An error occured while printing the snippet");
+    console.error("[World API]: An error occured while printing the snippet");
   }
 }
