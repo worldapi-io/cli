@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import create from "../actions/fs/create.js";
 import eliminate from "../actions/fs/eliminate.js";
+import replace from "../actions/fs/replace.js";
 import search from "../actions/fs/search.js";
 const fs = new Command()
 
@@ -27,5 +28,13 @@ fs.command('eliminate')
     .argument("<path>", "Path to the directory to search in")
     .option('-d, --dir', 'Query is a directory')
     .action(eliminate)
+
+fs.command("replace")
+    .description("Searches the file path for a string and replaces it with another string")
+    .argument("<path>", "Directory to execute the command in")
+    .option("-q, --query <query>", "Query to search for")
+    .option("-r, --replace <replace>", "String to replace the query with")
+    .action(replace)
+
 
 export default fs
